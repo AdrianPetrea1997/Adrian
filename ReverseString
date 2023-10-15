@@ -1,0 +1,22 @@
+public class ReverseString {
+    public static void main(String[] args) {
+        String input = "ChoocoCheese";
+        StringBuilder input1 =new StringBuilder();
+        input1.append (input);
+       
+        input1.reverse();
+       
+        System.out.println (input1);
+    }
+}
+
+
+
+         //The append() method is used to add the contents
+         // of the input string to the input1 StringBuilder.
+         // This means that the string "ChoocoCheese"
+         // is appended to input1.
+         //The reverse() method is then called on input1.
+         // This method reverses the content of the StringBuilder
+         // in place. So, after this line, input1 will contain
+         / the reversed string.
