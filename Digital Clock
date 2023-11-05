@@ -1,0 +1,27 @@
+import javax.swing.*;
+import java.awt.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+public class DigitalClock {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Digital Clock");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(600, 300);
+        frame.setLayout(new FlowLayout());
+        JLabel timeLabel = new JLabel();
+        timeLabel.setFont(new Font("Arial", Font.PLAIN, 76));
+        frame.add(timeLabel);
+        frame.setVisible(true);
+        Timer timer = new Timer(1000, e -> {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+        Date currentTime = new Date();
+        String timeText = dateFormat.format(currentTime);
+        timeLabel.setText(timeText);
+        });
+        timer.start();
+
+
+    }
+}
